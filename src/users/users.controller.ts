@@ -8,6 +8,7 @@ export class UsersController {
 
     constructor(private readonly usersService: UsersService) { }
 
+    //route handlers
     @Get() 
     findAll(@Query('role') role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
         return this.usersService.findAll(role)
