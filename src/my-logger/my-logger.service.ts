@@ -7,7 +7,7 @@ import * as path from 'path'
 export class MyLoggerService extends ConsoleLogger {
     log(message: any, context?: string) {
         const entry = `${context}\t${message}`
-
+        this.logToFile(entry)
         super.log(message, context)
     }
 
